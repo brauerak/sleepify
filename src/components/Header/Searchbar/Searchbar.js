@@ -2,21 +2,23 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from 'reactstrap'
 import styles from '../Searchbar/Searchbar.module.css'
+import {useNavigate} from 'react-router'
 
-const propTypes = {
-  onSearch: PropTypes.func.isRequired
-}
 
 function Searchbar(props) {
   const [term, setTerm] = useState('');
+  const navigate = useNavigate();
 
 
   /* useREf allows me to set reference to something. In this case I will 
   set a reference to input */
   const inputRef = useRef(null);
   
+  /* useNavigate lets me navigate to given path.
+  Cool is that I can pass the delta I want to go in the history stack.
+  For example navigate(-1) works like the back button */
   const search = () => {
-    props.onSearch(term)
+   navigate(`/search/${term}`)
   }
 
   /* another way is to put this function direct to property onKeyDown
@@ -63,6 +65,5 @@ function Searchbar(props) {
   );
 }
 
-Searchbar.propTypes = propTypes;
 
 export default Searchbar;
