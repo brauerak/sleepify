@@ -13,6 +13,8 @@ import useWebsiteTitle from './hooks/useWebsiteTitle'
 import { initialState, reducer } from './reducer';
 import Home from './pages/Home/Home';
 import HotelPage from './pages/Hotel/HotelPage';
+import Search from './pages/Search/Search';
+import Account from './pages/Account/Account';
 
 
 
@@ -42,6 +44,20 @@ function App() {
         path={`/hotels/:id`}  
         element={
          <HotelPage />
+        }
+      >
+      </Route>
+      <Route 
+        path={`/search/:term`}  
+        element={
+         <Search />
+        }
+      >
+      </Route>
+      <Route 
+        path={`/profile`}  
+        element={
+         <Account />
         }
       >
       </Route>
