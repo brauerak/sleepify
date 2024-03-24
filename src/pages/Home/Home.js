@@ -1,4 +1,4 @@
- import { useContext, useEffect } from "react";
+ import { useContext, useEffect, useState } from "react";
 import backendHotels from "../../BackendHotels";
 import Header from "../../components/Header/Header";
 import Hotels from "../../components/Hotels/Hotels";
@@ -9,33 +9,24 @@ import useWebsiteTitle from "../../hooks/useWebsiteTitle";
 export default function Home (props) {
 
   const reducerContext = useContext(ReducerContext)
+
+  const [loading, setLoading] = useState(true);
+  const [hotels, setHotels] = useState([]);
   
     useWebsiteTitle('Home')
-  
-    const searchHandler = term => {
-        //filtrujemy po tabeli hotles a nie po state'cie poniewaz state moze byc juz zmieniony np po wykonanym filtrowaniu
-        const newHotels = [...backendHotels]
-                          .filter(x => x.city.toLowerCase()
-                          .includes(term.toLowerCase()))
-        reducerContext.dispatch({type: 'set-hotels', hotels: newHotels});
-      }
-  
     
       useEffect(() => {
         setTimeout(() => {
-          reducerContext.dispatch({ type: 'set-hotels', hotels: backendHotels});
-          reducerContext.dispatch({ type: 'set-loading', loading: false});
+          setHotels(backendHotels)
+          setLoading(false);
         }, 1000);
       }, [])
 
-      if(reducerContext.state.loading) {
-        return <LoadingIcon />
-      }
 
-    return (
+    return loading ? <LoadingIcon /> : (
         <>
-            <Header onSearch={(term) => searchHandler(term)} />
-            <Hotels hotels={reducerContext.state.hotels} />;
+            <Header />
+            <Hotels hotels={hotels} />;
         </>
     )
 }
