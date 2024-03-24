@@ -1,0 +1,22 @@
+.input {
+    border-radius: 6px;
+    border: 1px solid white;
+    color: black;
+    background: none;
+}
+
+.input:focus {
+    background-color: white;
+    color: black;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+    padding-left: 8px;
+  }
+
+  .dflex {
+    gap: 15px;
+    justify-content: center;
+  }

@@ -1,0 +1,29 @@
+.header {
+    height: 100vh;
+    /*background:  rgba(0,0,0,0.8,), url(../../assets/images/header.webp) center;*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*opacity: 0.8;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    color: white;
+    font-size: 3rem;
+    font-weight:bold;
+    text-align: center;
+}
+
+.headerImage {
+    background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.728)), url("../../assets/images/header3.webp");
+    background-size: cover;
+    position: absolute;
+    top: -5%;
+    bottom: -5%;
+    left: -5%;
+    right: -5%;
+    z-index: -1;
+
+}
