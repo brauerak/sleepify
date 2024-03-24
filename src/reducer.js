@@ -6,10 +6,6 @@
 
   export const reducer = (state, action) => {
     switch (action.type) {
-      case 'set-hotels':
-        return {...state, hotels: action.hotels};
-      case 'set-loading':
-        return {...state, loading: action.loading};
       case 'login':
         return {...state, isAuthenticated: true}
       case 'logout':
@@ -20,7 +16,5 @@
   }
 
   export const initialState = {
-    hotels: [],
-    loading: true,
     isAuthenticated: true
   }
