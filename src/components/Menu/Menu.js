@@ -26,7 +26,7 @@ function Menu() {
             </NavLink>
             {auth ? (
                 <>
-                    <NavLink to='/profile' className='btn btn-outline-secondary m-2'>
+                    <NavLink to='/account' className='btn btn-outline-secondary m-2'>
                     My Profile
                     </NavLink>
                     <a href='#' className='btn btn-outline-secondary m-2' onClick={logout}>  Log out
