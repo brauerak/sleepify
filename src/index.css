@@ -17,3 +17,12 @@ code {
 .card {
   border: none;
 }
+
+.nav-link {
+ color: #979b9e;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: #6C757D;
+}
