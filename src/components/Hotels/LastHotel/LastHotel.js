@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import useStateStorage from "../../../hooks/useStateStorage";
 import styles from "../BestHotel/BestHotel.module.css";
 
 
@@ -14,9 +14,9 @@ function LastHotel(props) {
           <p
             className={`${styles.hotel}`}
           >{`${props.name} in ${props.city}`}</p>
-          <a href="#" className="btn btn-outline-secondary mx-2 my-2">
+          <Link to={`/hotels/${props.id}`} className="btn btn-outline-secondary mx-2 my-2">
             Yes!
-          </a>
+          </Link>
           <button href="#" onClick={props.onRemove} className="btn btn-outline-secondary mx-2 my-2">
             No.
           </button>

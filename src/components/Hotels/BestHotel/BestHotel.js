@@ -3,6 +3,7 @@ import moment, { locale } from "moment";
 import { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import useStateStorage from "../../../hooks/useStateStorage";
+import { Link } from "react-router-dom";
 
 const BestHotel = (props) => {
   const [time, setTime] = useState("");
@@ -37,9 +38,9 @@ const BestHotel = (props) => {
         <p className={`${styles.hotel}`}> {`${hotel.name} in ${hotel.city}`}</p>
         <p className={`${styles.rating}`}>{`Rating: ${hotel.rating} `}</p>
         <p className={`${styles.time}`}>{time}</p>
-        <a href="#" className="btn btn-outline-secondary mx-2 my-2">
+        <Link to={`/hotels/${hotel.id}`} className="btn btn-outline-secondary mx-2 my-2">
           See more
-        </a>
+        </Link>
       </div>
       : <div className={`${styles.info}`}> Log in to get best offer.</div>}
       
