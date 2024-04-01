@@ -3,6 +3,8 @@ import styles from '../Account/Account.module.css'
 import AccountDetails from './AccountDetails/AccountDetails'
 import MyHotels from './MyHotels/MyHotels'
 function Account (props) {
+
+
     return (
         <div className={`${styles.body}`}>
             <div className={`card ${styles.card}`}>
