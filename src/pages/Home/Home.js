@@ -12,8 +12,10 @@ export default function Home (props) {
 
   const [loading, setLoading] = useState(true);
   const [hotels, setHotels] = useState([]);
+  const setTitle = useWebsiteTitle()
+
+  setTitle('Home')
   
-    useWebsiteTitle('Home')
     
       useEffect(() => {
         setTimeout(() => {
