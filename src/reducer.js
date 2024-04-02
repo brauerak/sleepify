@@ -16,5 +16,5 @@
   }
 
   export const initialState = {
-    isAuthenticated: true
+    isAuthenticated: false
   }
