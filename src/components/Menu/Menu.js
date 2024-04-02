@@ -5,9 +5,8 @@ import useAuth from '../../hooks/useAuth';
 import styles from '../Menu/Menu.module.css'
 
 function Menu() {
-
-    //const auth = useContext(AuthContext);
-    const [auth, setAuth] = useAuth();
+    
+    const [auth, setAuth] = useAuth(false);
 
     const login = (e) => {
         e.preventDefault();
