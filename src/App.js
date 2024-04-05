@@ -16,6 +16,7 @@ import MyHotels from "./pages/Account/MyHotels/MyHotels";
 import NotFound from "./pages/404/404";
 import Login from "./pages/Auth/Login/Login"
 import ErrorBoundry from "./hoc/ErrorBoundry";
+import AddHotel from "./pages/Account/AddHotel/AddHotel";
 const Account = lazy(() => import("./pages/Account/Account"));
 
 
@@ -41,6 +42,7 @@ function App() {
                  : <Navigate to="/login"/>}>
             <Route path={'/account/edit'} element={ <AccountDetails />}></Route>
             <Route path={`/account/hotels`} element={<MyHotels />}></Route>
+            <Route path={`/account/hotels/addhotel`} element={<AddHotel />}></Route>
             <Route path={`/account`} element={<AccountDetails />}></Route>
           </Route>
           <Route path={`/login`} element={<Login />}></Route>
