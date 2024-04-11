@@ -53,8 +53,8 @@ function AccountDetails (props) {
     return (
         <>
             <form onSubmit={submit}>
-                <div class="m-3">
-                    <label for="email" class="form-label">Email address</label>
+                <div className="m-3">
+                    <label htmlFor="email" className="form-label">Email address</label>
                     <input
                         className={`form-control ${errors.email
                             ? 'is-invalid' 
@@ -62,14 +62,13 @@ function AccountDetails (props) {
                         type="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        class="form-control" 
                         placeholder="name@example.com"
                     />
                     <div className='invalid-feedback'> {errors.email}</div>
                     <div className='valid-feedback'> OK! </div>
                 </div>
-                <div class="m-3">
-                    <label for="inputPassword5" class="form-label">Password</label>
+                <div className="m-3">
+                    <label htmlFor="inputPassword5" className="form-label">Password</label>
                     <input 
                         className={`form-control ${errors.passsword 
                             ? 'is-invalid' 
@@ -78,12 +77,11 @@ function AccountDetails (props) {
                         value={password} 
                         onChange={e => setPassword(e.target.value)}
                         id="inputPassword5" 
-                        class="form-control" 
                         aria-describedby="passwordHelpBlock" 
                     />
                     <div className='invalid-feedback'> {errors.passsword}</div>
                     <div className='valid-feedback'> OK! </div>
-                    <div id="passwordHelpBlock" class="form-text">
+                    <div id="passwordHelpBlock" className="form-text">
                         Your password must be 8-20 characters long, contain letters, numbers and special characters and must not contain spaces or emoji.
                     </div>
                 </div>

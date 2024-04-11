@@ -35,27 +35,27 @@ function Login (props) {
                 ? (<div className="alert alert-danger">Email or password not correct.</div>) 
                 : null }
             <form onSubmit={submit}>
-                <div class="m-3">
-                    <label for="email" class="form-label">Email address</label>
+                <div className="m-3">
+                    <label htmlFor="email" className="form-label">Email address</label>
                     <input 
                         type="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        class="form-control" 
+                        className="form-control" 
                         placeholder="name@example.com" 
                     />
                 </div>
-                <div class="m-3">
-                    <label for="inputPassword5" class="form-label">Password</label>
+                <div className="m-3">
+                    <label htmlFor="inputPassword5" className="form-label">Password</label>
                     <input 
                         type="password"
                         value={password} 
                         onChange={e => setPassword(e.target.value)}
                         id="inputPassword5" 
-                        class="form-control" 
+                        className="form-control" 
                         aria-describedby="passwordHelpBlock" 
                     />
-                    <div id="passwordHelpBlock" class="form-text">
+                    <div id="passwordHelpBlock" className="form-text">
                         Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                     </div>
                 </div>
